@@ -1,0 +1,75 @@
+
+ToDo
+ [x] build solid model  -> 2005 / 2006
+ [x] rebuild solid model with new interface	
+ - try out:
+   [x] 7 steering angles
+   [x] cut-corners increase
+   [x] increase Entropie
+   [ ] anealing Entropie
+   [x] longer learning
+   [ ] reduce discount-rate
+
+
+Championship Cup @ Las Vegas
+
+Vehicles
+----
+Accenture_005: (grey) 3 CNN, 1.0 m/s, 7 Angles, 1 Speed (mod from Accenture_003)
+Accenture_004: (white) 3 CNN, 1.5 m/s, 7 Angles, 1 Speed (mod from Accenture_101010)    -> pretty fast
+Accenture_003: (orange) 3 CNN, 2.0 m/s, 5 Angles, 1 Speed (mod from Accenture 101010)    -> too fast
+Accenture_002: (blue) 3 CNN, 1.0 m/s, 5 Angles, 1 Speed
+Accenture_001: (red) 3 CNN, 0.3 m/s, 5 Angles, 1 Speed
+Accenture_101010: (purple) 3 CNN, 3 m/s, 5 Angles, 1 Speed   -> too fast
+Accenture 101010: (purple) 5 CNN, 3 m/s, 5 Angles, 1 Speed   -> too fast
+
+
+
+Models
+----
+->> !(8.5)(7 angles;) Model-2113: Accenture_005, discount-rate: 0.5, cut-corners: 0.9, update-each: 5, 20 min.
+!(8) (7 angles; good; maybe overfitted a little) Model-2112: Accenture_005, discount-rate: 0.5, cut-corners: 0.8, update-each: 5, 25 min.
+ (7) (fast but good)  Model-2111-001: +10 min.
+!(8) (fast but good)  Model-2111: Accenture_004, discount-rate: 0.5, cut-corners: 0.8, update-each: 5, 25 min.
+ (1) (too fast) Model-2110: Accenture_003, discount-rate: 0.5, cut-corners: 0.8, update-each: 5, 25 min.
+!(6) (clone does not achieve 100% track completion) Model-2109: Accenture_002, S=0.1, discount-rate: 0.5, cut-corners: 0.9, update-each: 5, 60 min.
+ (8) (looks good; may be underconverged a little) Model-2108: Accenture_002, discount-rate: 0.5, cut-corners: 0.8, update-each: 5, 15 min.
+->> !(9) (looks good; might cut corners too much?) Model-2107: Accenture_002, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 18 min.
+!(6) (may be overfitted) Model-2106: Accenture_002, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 30 min.
+ (3) (slow vehicle) Model-2105: Accenture_001, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 30 min.
+ (0) (not good because of too fast vehicle) Model-2104: Accenture_101010, Speed: 3.0, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 40 min.
+ (0) (not good because of too fast vehicle) Model-2103: Accenture 101010, Speed: 3.0, discount-rate: 0.999, cut-corners: 1.0, update-each: 7, 40 min.
+ (2) (good but old UI) Model-2006: Speed: 3.0, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 15 min
+ (2) (good but old UI) Model-2005: Speed: 3.0, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 20 min
+Model-2003: Speed: 3.0, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 60 min.
+
+
+
+
+
+
+
+Kronberg
+---
+
+submissions
+
+ 1: Model100
+ 2: Model103
+ 3: Model104     <---  the model used for all runs that made it to the leader-board
+ 4: Model107
+ 5: Model108
+ 6: ? didnt work when trying Model104-002
+ 7: ? didnt work when trying again Model104-002
+ 
+ 
+ Model104: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.5, update-each:10, 20 min.
+ Modell05: Speed: 6.0, discount-rate: 0.5, cut-corners: 1.3, update-each:10, 15 min.
+ Modell06: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.3, max-steering: 20, update-each:10, duration: 15 min.
+ Model107: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.5, max-steering: 20, steering-df: 3, update-each: 5, duration: 18 min.
+ Model108: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.5, max-steering: 15, steering-df: 3, update-each: 5, duration: 18 min.
+ Model121: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.3, update-each:10, 20 min. on London Loop
+ model104-002: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.5, update-each:10, 20 min. Re-Invent + 12 min. London
+ 
+ 
+ 
