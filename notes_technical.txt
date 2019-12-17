@@ -1,4 +1,3 @@
-
 ToDo
  [x] build solid model  -> 2005 / 2006
  [x] rebuild solid model with new interface	
@@ -46,9 +45,6 @@ Model-2003: Speed: 3.0, discount-rate: 0.5, cut-corners: 1.0, update-each: 7, 60
 
 
 
-
-
-
 Kronberg
 ---
 
@@ -72,4 +68,8 @@ submissions
  model104-002: Speed: 1.5, discount-rate: 0.5, cut-corners: 1.5, update-each:10, 20 min. Re-Invent + 12 min. London
  
  
- 
+ Meaning of the parameters
+ ---
+- parameters not mentioned are set to the default values
+- cut-corners: The factor used to determine the radius of the circle used to find the point the car should aim for. The Radius is the product of this and the width of the track
+- update-each: Number of epochs per learning cycle (the last in the list of hyper parameters)
